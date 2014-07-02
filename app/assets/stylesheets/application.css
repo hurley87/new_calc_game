@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face
+{
+	font-family: cool_numbers;
+	src: url(digital.TTF);
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #2c3e50;
+	color: #2c3e50;
+	font-weight: 100;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+header {
+	background-color: #3498db;	
+	padding: 10px;
+}
+
+/*
+
+General styles to user throughout the site
+
+*/
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.back_btn {
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+	color: #3498db;
+	font-size: 2em;
+}
+
+.box {
+	background-color: #3498db;
+	padding: 20px;
+	margin: 20px auto;
+	width: 50%;
+	font-size: 2em;
+}
+
+.title {
+	font-size: 3em;
+}
+
+footer {
+	position:fixed;
+  bottom:0;
+  width: 100%;
+
+  padding: 20px;  /* Height of the footer */
+	background-color: #3498db;
+	margin: 0 auto;
+
+}
