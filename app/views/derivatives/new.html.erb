@@ -1,0 +1,46 @@
+
+
+<div class="box" id="stopwatch">
+	<div class="clock">
+		<span id="seconds">00</span>:<span id="minutes">00</span><span id="question_number">5</span>
+	</div>
+	<input id="start" type='button' value='Start'/>
+</div>
+
+<%= form_for(@dTime) do |f|  %>
+
+	<div class="q1 box">
+		<span class="red"></span>
+		<h2><%=  @questions[0] %></h2>
+		<input type="text" id="q1" name="q1" />
+	</div>
+
+	<div class="q2 box">
+		<span class="red"></span>
+		<h2><%= @questions[1] %></h2>
+		<input type="text" id="q2" name="q2" >
+	</div>
+
+	<div class="q3 box">
+		<span class="red"></span>
+		<h2><%= @questions[2]  %></h2>
+		<input type="text" id="q3" name="q3" >
+	</div>
+
+	<div class="q4 box">
+		<span class="red"></span>
+		<h2><%= @questions[3]%></h2>
+		<input type="text" id="q4" name="q4">
+	</div>
+
+	<div class="q5 box">
+		<span class="red"></span>
+		<h2><%= @questions[4] %></h2>
+		<input type="text" id="q5" name="q5">
+	</div>
+
+	<div class="submit_div">
+		<p style="text-align: center;"><input id="submit" type="submit" value="Submit Your Time"/></p>
+	</div>
+
+<% end %>

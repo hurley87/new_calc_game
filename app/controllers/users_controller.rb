@@ -12,11 +12,11 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
 
-  	if @users.find_by(:email => @user.email) || !@user.save
-  		render "new"
+  	if @user.save
+      session[:user_id] = @user.id
+      redirect_to root_path, :notice => "Welcome, #{ @user.username } "
   	else
-  		@user.save
-  		redirect_to root_path, :notice => "Welcome, #{ @user.email } "
+  		render "new"
   	end
   end
 
