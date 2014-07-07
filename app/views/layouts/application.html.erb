@@ -19,9 +19,13 @@
 			<span class="pull-right"><%= link_to "Login", new_session_path  %> | <%= link_to "Create User", new_user_path  %></span>
 			<% end %>	
 	</header>
+	<% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
 
-	
-	<%= flash[:notice]  %>
 <%= yield %>
  <footer>
  </footer>
