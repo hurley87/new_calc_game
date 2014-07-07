@@ -1,0 +1,32 @@
+
+
+	<div class="name box">
+		<label for="name">Welcome, <%= current_user.username %>. Solve these additions as fast as you can.</label>
+	</div>
+
+<div class="box" id="stopwatch">
+	<div class="clock">
+		<span id="seconds">00</span>:<span id="minutes">00</span><span id="question_number">5</span>
+	</div>
+	<input id="start" type='button' value='Start'/>
+</div>
+
+<%= form_for(@dTime) do |f|  %>
+
+	<%= f.hidden_field :score %>
+
+	<div id="add-q1" class="box center">
+		<div class="add-box">
+				<h2 id="num1"></h2>
+		</div>
+		<div class="add-box">
+				<h2 id="num2"></h2>
+		</div>
+		<p><input type="text" id="add-ans" name="add-ans" /></p>
+
+		
+		<div class="submit_div">
+			<%= f.submit "Submit Time", class: "submit_btn" %>
+		</div>
+	</div>
+<% end %>

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
   root 'pages#home'
 
   get 'pages/about'
@@ -9,7 +7,7 @@ Rails.application.routes.draw do
   get 'pages/levels'
 
   get 'sessions/delete' => "sessions#destroy"
-  
+  resources :additions, :only => [:new, :create, :index]
   resources :derivatives, :only => [:new, :create, :index]
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users 

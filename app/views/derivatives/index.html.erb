@@ -1,6 +1,29 @@
+<h1 class="center">Derivatives</h1>
+
+<div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>	
+
+<div class="box">
+	<p class="center"><iframe width="560" height="315" src="//www.youtube.com/embed/a5uQMwRMHcs" frameborder="0" allowfullscreen></iframe></p>
+</div>
+
+<div class="box">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>	
+
 
 <%= link_to new_derivative_path do  %>
 	<div class="box">
-			<h2>Post a time</h2>
+			<h2 class="center">Take the Derivative Challenge</h2>
 	</div>
 <% end %>
+
+<h1 class="center">Best Times</h1>
+
+
+<% @derivatives.each do |d| %>
+	<div class="box">
+			<h2><%= link_to d.user.username, user_path(d.user) %>  ->  <%= d.score %> </h2>
+	</div>		
+	<% end %>
