@@ -19,6 +19,7 @@
 
 $(document).ready(function() {
 
+		$('#userTable').tablesorter();
 	
 		// hide everything off the start
 		$('.q1').hide();

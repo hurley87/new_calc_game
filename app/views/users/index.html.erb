@@ -2,6 +2,19 @@
 
 <h1>All Users</h1>
 
-<% @users.each do |user| %>
-			<h2><%= user.email %></h2>
-<% end %>
+<table id="userTable" class="tablesorter">
+	<tr>
+		<th>Username</th>
+		<th>Addition</th>
+		<th>Derivative</th>
+		<th>Overall</th>
+	</tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= link_to user.username, user_path(user) %></td>
+			<td><%= user.lowest_add %></td>
+			<td> <%= user.lowest_der  %></td>
+			<td><%= user.total_time  %></td>
+		</tr>			
+	<% end %>
+</table>
