@@ -3,18 +3,22 @@
 <h1>All Users</h1>
 
 <table id="userTable" class="tablesorter">
-	<tr>
-		<th>Username</th>
-		<th>Addition</th>
-		<th>Derivative</th>
-		<th>Overall</th>
-	</tr>
-	<% @users.each do |user| %>
+	<thead>
 		<tr>
-			<td><%= link_to user.username, user_path(user) %></td>
-			<td><%= user.lowest_add %></td>
-			<td> <%= user.lowest_der  %></td>
-			<td><%= user.total_time  %></td>
-		</tr>			
+			<th>Username</th>
+			<th>Addition</th>
+			<th>Derivative</th>
+			<th>Overall</th>
+		</tr>
+	</thead>
+	<% @users.each do |user| %>
+	 	<tbody>
+			<tr>
+				<td><%= link_to user.username, user_path(user) %></td>
+				<td><%= user.lowest_add %></td>
+				<td> <%= user.lowest_der  %></td>
+				<td><%= user.total_time  %></td>
+			</tr>
+		</tbody>			
 	<% end %>
 </table>

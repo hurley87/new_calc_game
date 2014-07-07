@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
-
+gem 'jquery-datatables-rails', '~> 2.1.10.0.2'
 # Use unicorn as the app server
 # gem 'unicorn'
 

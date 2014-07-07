@@ -13,13 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require dataTables/jquery.dataTables
 //= require_tree .
 		// code for the timer
 
 
 $(document).ready(function() {
 
-		$('#userTable').tablesorter();
+		$('#userTable').dataTable()
 	
 		// hide everything off the start
 		$('.q1').hide();
