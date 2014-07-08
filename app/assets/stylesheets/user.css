@@ -1,0 +1,44 @@
+/*
+
+	edit page
+
+*/
+
+.user_edit {
+	width: 70px;
+	margin: 20px;
+}
+
+.user_edit:hover {
+	color: white;
+	background-color: #3498db;	
+}	
+
+/*
+	user show page
+*/
+
+
+.data-wrapper {
+	width: 60%;
+	float: right;
+}
+
+.data-legend {
+	width: 40%;
+	float: left;
+}
+
+/*
+	user index page
+*/
+
+#userTable {
+	margin: auto;
+	font-size: 1.5em;
+}
+
+#userTable td, #userTable th {
+
+		padding: 10px;
+}
